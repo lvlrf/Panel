@@ -274,3 +274,19 @@ class NotificationReminder(Base):
     type = Column(Enum(ReminderType), nullable=False)
     expires_at = Column(DateTime, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
+
+
+# MRF Panel
+class Reseller(BaseModel):
+    id = db.Column(db.Integer, primary_key=True)
+    reseller_id = db.Column(db.Integer, nullable=False)
+    name = db.Column(db.String(255), nullable=False)
+    shop_name = db.Column(db.String(255), nullable=False)
+    state = db.Column(db.String(255), nullable=False)
+    city = db.Column(db.String(255), nullable=False)
+    mobile_number = db.Column(db.String(255), nullable=False)
+    note = db.Column(db.String(255), nullable=True)
+    pass = db.Column(db.String(255), nullable=False)
+    credit = db.Column(db.Integer, nullable=False)
+    trust_credit = db.Column(db.Integer, nullable=False)
+    show_trust_credit = db.Column(db.Boolean, nullable=False)
