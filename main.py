@@ -27,3 +27,9 @@ if __name__ == "__main__":
         )
     except FileNotFoundError:  # to prevent error on removing unix sock
         pass
+
+
+# MRF Panel
+from app.db import db
+
+db.create_all()
