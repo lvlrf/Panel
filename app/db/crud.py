@@ -656,6 +656,14 @@ def delete_notification_reminder_by_type(db: Session, user_id: int, reminder_typ
     return
 
 
+
+# MRF Panel
+
+class ResellerCRUD(CRUD):
+    model = Reseller
+
+
+
 def delete_notification_reminder(db: Session, dbreminder: NotificationReminder) -> None:
     db.delete(dbreminder)
     db.commit()
